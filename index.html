@@ -18,10 +18,11 @@
     
 <div class="mb-3">
     <label for="basic-url" class="form-label">Cole aqui o link do site</label>
-    <div class="input-group">
-      <span class="input-group-text" id="basic-addon3">https://empresa.com/</span>
-      <input type="text" class="form-control" id="basic-url" data-id="linkEmpresa" aria-describedby="basic-addon3 basic-addon4">
-    </div>
+    <form class="input-group" id="urlForm">
+      <label class="input-group-text" id="basic-addon3" for="urlInput">URL:</label>
+      <input type="text" class="form-control" id="urlInput" name="urlInput" placeholder="Insira a URL">
+      <button type="submit">Scrap</button>
+  </form>
     <div class="form-text" id="basic-addon4">exemplo de link a ser inserido.</div>
   </div>
 
@@ -30,15 +31,11 @@
             <tr>
               <th scope="col">empresa</th>  
               <th scope="col">linkedin</th>
-              <th scope="col">número</th>
-            </tr>
-            <tr>
-                <td>exact</td>
-                <td>www.linkedin.com/company/exact-sales/mycompany/</td>
-                <td>48 3181.0180</td>
+              <th scope="col">setor</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody data-tabela>
+
           </tbody>
         </table>        
       </table> 
@@ -52,9 +49,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-
-  <!-- javascript puppeteer-->
-  <script src="main.js"></script>
+  <scrpit src="api-server.js"></scrpit>
+  <script type="module" src="postTabela.js"></script>
 </body>
 
 </html>
